@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     public TMP_Text livesText;
     public TMP_Text enemiesKilledText;
     public GameObject gameOverPanel;
-    //public TMP_Text scoreText;
 
     private void Awake()
     {

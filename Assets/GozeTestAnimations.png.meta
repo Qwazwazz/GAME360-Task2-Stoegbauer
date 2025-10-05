@@ -1,0 +1,815 @@
+fileFormatVersion: 2
+guid: ffa910e3147bb0440b270492bc79e56e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3152120269495165386
+    second: GozeTestAnimations_0
+  - first:
+      213: 7453729831991071232
+    second: GozeTestAnimations_1
+  - first:
+      213: -6587395941313134572
+    second: GozeTestAnimations_2
+  - first:
+      213: 1340991160322503434
+    second: GozeTestAnimations_3
+  - first:
+      213: 1575923354445095944
+    second: GozeTestAnimations_4
+  - first:
+      213: 898517385504478889
+    second: GozeTestAnimations_5
+  - first:
+      213: 7885950984191987102
+    second: GozeTestAnimations_6
+  - first:
+      213: -1318135172077793882
+    second: GozeTestAnimations_7
+  - first:
+      213: 1200623616176677944
+    second: GozeTestAnimations_8
+  - first:
+      213: -2798841787070638591
+    second: GozeTestAnimations_9
+  - first:
+      213: -1025665005109634361
+    second: GozeTestAnimations_10
+  - first:
+      213: 1588260222849633906
+    second: GozeTestAnimations_11
+  - first:
+      213: -7476134457419411643
+    second: GozeTestAnimations_12
+  - first:
+      213: -7728812811265432709
+    second: GozeTestAnimations_13
+  - first:
+      213: 313693231862513449
+    second: GozeTestAnimations_14
+  - first:
+      213: -121141868136713798
+    second: GozeTestAnimations_15
+  - first:
+      213: -8578510988461576162
+    second: GozeTestAnimations_16
+  - first:
+      213: -7190488483851097670
+    second: GozeTestAnimations_17
+  - first:
+      213: 1134633174036822442
+    second: GozeTestAnimations_18
+  - first:
+      213: -8687870055508841591
+    second: GozeTestAnimations_19
+  - first:
+      213: -5785414676426786160
+    second: GozeTestAnimations_20
+  - first:
+      213: -6452834683529852755
+    second: GozeTestAnimations_21
+  - first:
+      213: -1254412715451082662
+    second: GozeTestAnimations_22
+  - first:
+      213: 5215711431323702071
+    second: GozeTestAnimations_23
+  - first:
+      213: -6178353929770179457
+    second: GozeTestAnimations_24
+  - first:
+      213: -2169997041967778097
+    second: GozeTestAnimations_25
+  - first:
+      213: -5751434431911483821
+    second: GozeTestAnimations_26
+  - first:
+      213: -6824478598785517304
+    second: GozeTestAnimations_27
+  - first:
+      213: 1848962729090693275
+    second: GozeTestAnimations_28
+  - first:
+      213: -520411000454999121
+    second: GozeTestAnimations_29
+  - first:
+      213: -3702245736996574146
+    second: GozeTestAnimations_30
+  - first:
+      213: -9182610477399823604
+    second: GozeTestAnimations_31
+  - first:
+      213: -7504292915543878215
+    second: GozeTestAnimations_32
+  - first:
+      213: 4297334742697322917
+    second: GozeTestAnimations_33
+  - first:
+      213: -5867102621423828257
+    second: GozeTestAnimations_34
+  - first:
+      213: -8702999515422375863
+    second: GozeTestAnimations_35
+  - first:
+      213: 447345532837262128
+    second: GozeTestAnimations_36
+  - first:
+      213: 3795660049112566153
+    second: GozeTestAnimations_37
+  - first:
+      213: 3566853645810324813
+    second: GozeTestAnimations_38
+  - first:
+      213: -5890815465617962350
+    second: GozeTestAnimations_39
+  - first:
+      213: 1455104974615857437
+    second: GozeTestAnimations_40
+  - first:
+      213: -9113817716089535035
+    second: GozeTestAnimations_41
+  - first:
+      213: -1664105364973053568
+    second: GozeTestAnimations_42
+  - first:
+      213: 3160526611087987402
+    second: GozeTestAnimations_43
+  - first:
+      213: -480261716360653442
+    second: GozeTestAnimations_44
+  - first:
+      213: 8483484096348278370
+    second: GozeTestAnimations_45
+  - first:
+      213: -1580778932569594635
+    second: GozeTestAnimations_46
+  - first:
+      213: 1473506318179839335
+    second: GozeTestAnimations_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GozeTestAnimations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e9e67c05b6144d0800000000000000
+      internalID: -3152120269495165386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0025f876ac7f07760800000000000000
+      internalID: 7453729831991071232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4104e2bfa4ed494a0800000000000000
+      internalID: -6587395941313134572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0336fdfa582c9210800000000000000
+      internalID: 1340991160322503434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80421f6f0fdced510800000000000000
+      internalID: 1575923354445095944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6d1833dcc287c00800000000000000
+      internalID: 898517385504478889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9dc7e873a6807d60800000000000000
+      internalID: 7885950984191987102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6adca567b0b05bde0800000000000000
+      internalID: -1318135172077793882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834e72751d879a010800000000000000
+      internalID: 1200623616176677944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106922b39348829d0800000000000000
+      internalID: -2798841787070638591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca14efac1b14c1f0800000000000000
+      internalID: -1025665005109634361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ec5d9f142aa0610800000000000000
+      internalID: 1588260222849633906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_12
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f457c325f6f3890800000000000000
+      internalID: -7476134457419411643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73290972bdbdb490800000000000000
+      internalID: -7728812811265432709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_14
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ffb9515567a5400800000000000000
+      internalID: 313693231862513449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1b84edc1e915ef0800000000000000
+      internalID: -121141868136713798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1076f6f4b103f880800000000000000
+      internalID: -8578510988461576162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9a48e12d0463c90800000000000000
+      internalID: -7190488483851097670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9b6d83cd60fbf00800000000000000
+      internalID: 1134633174036822442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b64aef63c7e6780800000000000000
+      internalID: -8687870055508841591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09aff35110416bfa0800000000000000
+      internalID: -5785414676426786160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da802ed3b0de276a0800000000000000
+      internalID: -6452834683529852755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_22
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a581ecd084e679ee0800000000000000
+      internalID: -1254412715451082662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GozeTestAnimations_23
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7335efaa9ede16840800000000000000
+      internalID: 5215711431323702071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9f0461aca0635654bb29d263aa23ca87
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":14.0,"y":3.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      GozeTestAnimations_0: -3152120269495165386
+      GozeTestAnimations_1: 7453729831991071232
+      GozeTestAnimations_10: -1025665005109634361
+      GozeTestAnimations_11: 1588260222849633906
+      GozeTestAnimations_12: -7476134457419411643
+      GozeTestAnimations_13: -7728812811265432709
+      GozeTestAnimations_14: 313693231862513449
+      GozeTestAnimations_15: -121141868136713798
+      GozeTestAnimations_16: -8578510988461576162
+      GozeTestAnimations_17: -7190488483851097670
+      GozeTestAnimations_18: 1134633174036822442
+      GozeTestAnimations_19: -8687870055508841591
+      GozeTestAnimations_2: -6587395941313134572
+      GozeTestAnimations_20: -5785414676426786160
+      GozeTestAnimations_21: -6452834683529852755
+      GozeTestAnimations_22: -1254412715451082662
+      GozeTestAnimations_23: 5215711431323702071
+      GozeTestAnimations_3: 1340991160322503434
+      GozeTestAnimations_4: 1575923354445095944
+      GozeTestAnimations_5: 898517385504478889
+      GozeTestAnimations_6: 7885950984191987102
+      GozeTestAnimations_7: -1318135172077793882
+      GozeTestAnimations_8: 1200623616176677944
+      GozeTestAnimations_9: -2798841787070638591
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
