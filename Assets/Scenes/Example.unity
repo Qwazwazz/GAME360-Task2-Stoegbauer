@@ -1582,6 +1582,7 @@ MonoBehaviour:
   score: 0
   lives: 3
   enemiesKilled: 0
+  gameState: 1
   scoreText: {fileID: 348873195}
   livesText: {fileID: 553001271}
   enemiesKilledText: {fileID: 1120979359}
@@ -2469,7 +2470,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Main Menu
 --- !u!222 &1718465978
 CanvasRenderer:
   m_ObjectHideFlags: 0

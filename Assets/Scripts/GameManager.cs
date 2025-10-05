@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int score = 0;//score is calculated
     public int lives = 3;
     public int enemiesKilled = 0;
+    public int gameState = 1; // 0 = menu, 1 = active, 2 = game over
 
     [Header("UI References")]
     public TMP_Text scoreText;
@@ -117,6 +118,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GAME OVER!");
         if (gameOverPanel) gameOverPanel.SetActive(true);
+        gameState = 2;
         Time.timeScale = 0f; // Pause the game
     }
 
@@ -128,7 +130,8 @@ public class GameManager : MonoBehaviour
 
     public void quitGame()
     {
-        Application.Quit();
+        gameState = 0;
+        SceneManager.LoadScene("MainMenu");
     }
 
 
@@ -140,6 +143,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         lives = 3;
         enemiesKilled = 0;
+        gameState = 1;
 
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        
