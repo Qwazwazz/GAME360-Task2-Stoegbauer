@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using UnityEditor;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
 public class PlayerMovement : MonoBehaviour
 {
+    enum PlayerStates {Idle, Look, Walking}
+
+    public Animator animator;
+
+    PlayerStates state;
+    bool stateComplete;
+
     public float acceleration;
     public float groundSpeed;
     public float jumpSpeed;
@@ -31,6 +39,12 @@ public class PlayerMovement : MonoBehaviour
     {
         GetInput();
         HandleJump();
+
+        if (stateComplete)
+        {
+            SelectState();
+        }
+        UpdateState();
     }
 
     void FixedUpdate()
@@ -38,6 +52,73 @@ public class PlayerMovement : MonoBehaviour
         CheckGround();
         ApplyFriction();
         MoveWithInput();
+    }
+
+    void SelectState()
+    {
+        stateComplete = false;
+
+        if (grounded)
+        {
+            if (xInput == 0)
+            {
+                state = PlayerStates.Idle;
+                StartIdle();
+            }
+            else
+            {
+                state = PlayerStates.Walking;
+                StartWalking();
+            }
+        }
+    }
+
+    void UpdateState()
+    {
+        switch (state)
+        {
+            case PlayerStates.Idle:
+                UpdateIdle();
+                break;
+            case PlayerStates.Look:
+                UpdateLook();
+                break;
+            case PlayerStates.Walking:
+                UpdateWalking();
+                break;
+        }
+    }
+
+    void StartIdle()
+    {
+        animator.Play("Idle");
+    }
+
+    void StartLook()
+    {
+        animator.Play("Head Tilt Up");
+    }
+
+    void StartWalking() {
+        animator.Play("Walk");
+    }
+
+    void UpdateIdle()
+    {
+        if (!grounded || xInput != 0)
+            stateComplete = true;
+    }
+
+    void UpdateLook()
+    {
+        if (!grounded || xInput != 0)
+            stateComplete = true;
+    }
+
+    void UpdateWalking()
+    {
+        if (!grounded || xInput == 0)
+            stateComplete = true;
     }
 
     void GetInput()
