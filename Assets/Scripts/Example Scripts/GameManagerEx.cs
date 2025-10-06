@@ -114,6 +114,7 @@ public class GameManagerEx : MonoBehaviour
 
         scoreText = GameObject.Find("Score")?.GetComponent<TMP_Text>();
         livesText = GameObject.Find("Lives")?.GetComponent<TMP_Text>();
+        bossBar = GameObject.Find("BossHP")?.GetComponent<TMP_Text>();
         enemiesKilledText = GameObject.Find("EnemiesKilled")?.GetComponent<TMP_Text>();
         gameOverPanel = GameObject.Find("GameEndPanel");
         if (gameOverPanel != null)
@@ -139,6 +140,7 @@ public class GameManagerEx : MonoBehaviour
 
         if (lives <= 0)
         {
+            if (gameWinLose && lives <= 0 && bossHP >= 1) gameWinLose.text = "You Lose... \n" + "Final Score: " + score;
             GameOver();
         }
     }
@@ -158,7 +160,7 @@ public class GameManagerEx : MonoBehaviour
 
     public void BossKilled()
     {
-        if (gameWinLose && lives >= 1) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
+        if (gameWinLose && lives >= 1 && bossHP <= 0) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
         GameOver();
     }
 
@@ -180,8 +182,8 @@ public class GameManagerEx : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("GAME OVER!");
-        if (gameWinLose && lives <= 0) gameWinLose.text = "You Lose... \n" + "Final Score: " + score;
-        if (gameWinLose && lives >= 0) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
+        if (gameWinLose && lives <= 0 && bossHP >= 1) gameWinLose.text = "You Lose... \n" + "Final Score: " + score;
+        if (gameWinLose && lives >= 1 && bossHP <= 0) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
         if (bossBar) bossBar.text = " ";
         if (gameOverPanel) gameOverPanel.SetActive(true);
         state = gameState.GameOver;
@@ -211,10 +213,12 @@ public class GameManagerEx : MonoBehaviour
         score = 0;
         lives = 3;
         enemiesKilled = 0;
+        bossHP = 150;
         state = gameState.Playing;
         if (bossBar) bossBar.text = " ";
+        if(gameWinLose) gameWinLose.text = "You Lose... \n" + "Final Score: " + score;
 
-         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        
     }
 
