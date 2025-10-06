@@ -139,7 +139,6 @@ public class GameManagerEx : MonoBehaviour
 
         if (lives <= 0)
         {
-            if (gameWinLose) gameWinLose.text = "You Lose... \n" + "Final Score: " + score;
             GameOver();
         }
     }
@@ -181,6 +180,8 @@ public class GameManagerEx : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("GAME OVER!");
+        if (gameWinLose && lives <= 0) gameWinLose.text = "You Lose... \n" + "Final Score: " + score;
+        if (gameWinLose && lives >= 0) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
         if (bossBar) bossBar.text = "";
         if (gameOverPanel) gameOverPanel.SetActive(true);
         state = gameState.GameOver;

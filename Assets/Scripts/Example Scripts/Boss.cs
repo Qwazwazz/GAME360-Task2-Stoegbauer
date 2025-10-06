@@ -3,11 +3,11 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     [Header("Boss Stats")]
-    public int health = 1;
-    public float moveSpeed = 5f;
+    public int health = 150;
+    public float moveSpeed = 10f;
 
     [Header("AI")]
-    public float detectionRange = 5f;
+    public float detectionRange = 50f;
 
     private Transform player;
     private Rigidbody2D rb;

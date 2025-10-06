@@ -4,10 +4,10 @@ public class Enemy : MonoBehaviour
 {
     [Header("Enemy Stats")]
     public int health = 1;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 40f;
 
     [Header("AI")]
-    public float detectionRange = 5f;
+    public float detectionRange = 15f;
 
     private Transform player;
     private Rigidbody2D rb;
