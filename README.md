@@ -3,7 +3,7 @@
 # Task 2: [Pattern Name] Implementation
 
 ## Student Info
-- Name: [Your Name]
+- Name: Mark Pion Stoegbauer Jr.
 - ID: [Student ID]
 
 ## Pattern: Singleton
