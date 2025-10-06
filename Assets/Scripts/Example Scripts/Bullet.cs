@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
             if (enemy)
             {
                 enemy.TakeDamage(1);
-                GameManagerEx.Instance.AddScore(100);
+                GameManagerEx.Instance.AddScore(0);
                 Destroy(gameObject); // Destroy bullet
             }
         }

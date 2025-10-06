@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             Collectible collectible = other.GetComponent<Collectible>();
             if (collectible)
             {
-                GameManagerEx.Instance.CollectiblePickedUp(100);
+                GameManagerEx.Instance.CollectiblePickedUp(25);
                 AudioManagerEx.PlaySound(SoundType.COIN);
                 Destroy(other.gameObject);
 

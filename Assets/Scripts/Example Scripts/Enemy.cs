@@ -46,8 +46,6 @@ public class Enemy : MonoBehaviour
                 Vector2 direction = (player.position - transform.position).normalized;
                 // rb.linearVelocity = direction * moveSpeed;
                 rb.AddForce(direction * moveSpeed);
-                rb.AddForce(direction * moveSpeed);
-                rb.AddForce(direction * moveSpeed);
             }
             else
             {

@@ -142,7 +142,7 @@ public class GameManagerEx : MonoBehaviour
     public void EnemyKilled()
     {
         enemiesKilled++;
-        AddScore(100); // 100 points per enemy
+        AddScore(25); // 100 points per enemy
         Debug.Log($"Enemy killed! Total enemies defeated: {enemiesKilled}");
     }
 
@@ -150,6 +150,8 @@ public class GameManagerEx : MonoBehaviour
     public void CollectiblePickedUp(int value)
     {
         AddScore(value);
+        lives += 1;
+        UpdateUI();
         Debug.Log($"Collectible picked up worth {value} points!");
     }
 
