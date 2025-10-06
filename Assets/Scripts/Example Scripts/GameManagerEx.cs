@@ -158,7 +158,7 @@ public class GameManagerEx : MonoBehaviour
 
     public void BossKilled()
     {
-        if (gameWinLose) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
+        if (gameWinLose && lives >= 1) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
         GameOver();
     }
 
@@ -182,7 +182,7 @@ public class GameManagerEx : MonoBehaviour
         Debug.Log("GAME OVER!");
         if (gameWinLose && lives <= 0) gameWinLose.text = "You Lose... \n" + "Final Score: " + score;
         if (gameWinLose && lives >= 0) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
-        if (bossBar) bossBar.text = "";
+        if (bossBar) bossBar.text = " ";
         if (gameOverPanel) gameOverPanel.SetActive(true);
         state = gameState.GameOver;
         Time.timeScale = 0f; // Pause the game
@@ -212,7 +212,7 @@ public class GameManagerEx : MonoBehaviour
         lives = 3;
         enemiesKilled = 0;
         state = gameState.Playing;
-        if (bossBar) bossBar.text = "";
+        if (bossBar) bossBar.text = " ";
 
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        

@@ -1759,7 +1759,7 @@ MonoBehaviour:
   livesText: {fileID: 553001271}
   enemiesKilledText: {fileID: 1120979359}
   gameWinLose: {fileID: 791630306}
-  bossBar: {fileID: 0}
+  bossBar: {fileID: 1209528335}
   gameOverPanel: {fileID: 1077280299}
 --- !u!1 &1021244110
 GameObject:
@@ -2257,7 +2257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1209528334
 RectTransform:
   m_ObjectHideFlags: 0
