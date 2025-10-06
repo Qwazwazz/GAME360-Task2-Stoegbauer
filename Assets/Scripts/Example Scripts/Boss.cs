@@ -1,0 +1,97 @@
+using UnityEngine;
+
+public class Boss : MonoBehaviour
+{
+    [Header("Boss Stats")]
+    public int health = 1;
+    public float moveSpeed = 5f;
+
+    [Header("AI")]
+    public float detectionRange = 5f;
+
+    private Transform player;
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+        // Find player
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj) player = playerObj.transform;
+    }
+
+    private void Update()
+    {
+        ChasePlayer();
+    }
+
+    private void FixedUpdate()
+    {
+        
+    }
+
+    private void ChasePlayer()
+    {
+        if (player)
+        {
+            if (GameManagerEx.Instance.score > 1000)
+                moveSpeed = 10f;
+            if (GameManagerEx.Instance.score > 2000)
+                moveSpeed = 15f;
+            float distance = Vector2.Distance(transform.position, player.position);
+
+            if (distance <= detectionRange)
+            {
+                Vector2 direction = (player.position - transform.position).normalized;
+                // rb.linearVelocity = direction * moveSpeed;
+                rb.AddForce(direction * moveSpeed);
+            }
+            else
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        GameManagerEx.Instance.BossDamaged(health);
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        // This is where Singleton shines!
+        // Any Boss can easily notify the GameManagerEx
+        GameManagerEx.Instance.BossKilled(); //update the score of the player
+        Destroy(gameObject); // the Boss gets destroyed
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        // Custom 2D circle for older Unity versions
+        Gizmos.color = Color.red;
+
+        int segments = 32;
+        float angle = 0f;
+        Vector3 lastPos = transform.position + new Vector3(detectionRange, 0, 0);
+
+        for (int i = 1; i <= segments; i++)
+        {
+            angle = (i * 360f / segments) * Mathf.Deg2Rad;
+            Vector3 newPos = transform.position + new Vector3(
+                Mathf.Cos(angle) * detectionRange,
+                Mathf.Sin(angle) * detectionRange,
+                0
+            );
+            Gizmos.DrawLine(lastPos, newPos);
+            lastPos = newPos;
+        }
+    }
+}

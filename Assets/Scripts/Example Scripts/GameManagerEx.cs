@@ -14,13 +14,16 @@ public class GameManagerEx : MonoBehaviour
     public int score = 0;//score is calculated
     public int lives = 3;
     public int enemiesKilled = 0;
-    public enum gameState {Menu, Playing, GameOver};
+    public int bossHP = 150;
+    public enum gameState { Menu, Playing, GameOver };
     public gameState state;
 
     [Header("UI References")]
     public TMP_Text scoreText;
     public TMP_Text livesText;
     public TMP_Text enemiesKilledText;
+    public TMP_Text gameWinLose;
+    public TMP_Text bossBar;
     public GameObject gameOverPanel;
     bool stateComplete;
 
@@ -83,6 +86,7 @@ public class GameManagerEx : MonoBehaviour
     private void OnEnable()
     {
         state = gameState.Playing;
+        if (bossBar) bossBar.text = "";
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -135,6 +139,7 @@ public class GameManagerEx : MonoBehaviour
 
         if (lives <= 0)
         {
+            if (gameWinLose) gameWinLose.text = "You Lose... \n" + "Final Score: " + score;
             GameOver();
         }
     }
@@ -146,6 +151,17 @@ public class GameManagerEx : MonoBehaviour
         Debug.Log($"Enemy killed! Total enemies defeated: {enemiesKilled}");
     }
 
+    public void BossDamaged(int health)
+    {
+        bossHP = health;
+        if (bossBar) bossBar.text = "Boss HP: " + bossHP + "/150";
+    }
+
+    public void BossKilled()
+    {
+        if (gameWinLose) gameWinLose.text = "You Win! \n" + "Final Score: " + score;
+        GameOver();
+    }
 
     public void CollectiblePickedUp(int value)
     {
@@ -165,6 +181,7 @@ public class GameManagerEx : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("GAME OVER!");
+        if (bossBar) bossBar.text = "";
         if (gameOverPanel) gameOverPanel.SetActive(true);
         state = gameState.GameOver;
         Time.timeScale = 0f; // Pause the game
@@ -194,6 +211,7 @@ public class GameManagerEx : MonoBehaviour
         lives = 3;
         enemiesKilled = 0;
         state = gameState.Playing;
+        if (bossBar) bossBar.text = "";
 
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        

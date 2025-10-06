@@ -2,7 +2,7 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     [Header("Collectible Settings")]
-    public int value = 0;
+    public int value = 10000;
     public float rotationSpeed = 90f;
     private void Update()
     {

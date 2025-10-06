@@ -29,6 +29,14 @@ public class Bullet : MonoBehaviour
                 GameManagerEx.Instance.AddScore(0);
                 Destroy(gameObject); // Destroy bullet
             }
+
+            Boss boss = other.GetComponent<Boss>();
+            if (boss)
+            {
+                boss.TakeDamage(1);
+                GameManagerEx.Instance.AddScore(1000);
+                Destroy(gameObject);
+            }
         }
 
         // Destroy bullet if it hits walls or boundaries
