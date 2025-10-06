@@ -410,7 +410,7 @@ Transform:
   m_GameObject: {fileID: 265231160}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.85, y: 3.99, z: 177.77992}
+  m_LocalPosition: {x: -9.78, y: -0.2, z: 177.77992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1336,6 +1336,7 @@ GameObject:
   - component: {fileID: 743401653}
   - component: {fileID: 743401652}
   - component: {fileID: 743401651}
+  - component: {fileID: 743401654}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -1406,19 +1407,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 743401652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 933153938}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: quitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &743401652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1457,6 +1446,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743401649}
   m_CullTransparentMesh: 1
+--- !u!114 &743401654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743401649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1923cdd0ab5fa4398727212644201f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuitButtonHandler
 --- !u!1001 &817761888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1584,7 +1585,7 @@ MonoBehaviour:
   score: 0
   lives: 3
   enemiesKilled: 0
-  gameState: 1
+  state: 0
   scoreText: {fileID: 348873195}
   livesText: {fileID: 553001271}
   enemiesKilledText: {fileID: 1120979359}
@@ -1619,7 +1620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3333278696691510216, guid: d971f7936aacef644b6c27cf8d3fac5e, type: 3}
-  spawnRate: 2
+  spawnRate: 0.5
   spawnPoints:
   - {fileID: 265231161}
   - {fileID: 1846391230}
@@ -1943,6 +1944,7 @@ GameObject:
   - component: {fileID: 1148780224}
   - component: {fileID: 1148780223}
   - component: {fileID: 1148780222}
+  - component: {fileID: 1148780225}
   m_Layer: 5
   m_Name: 'Replay '
   m_TagString: Untagged
@@ -2013,19 +2015,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1148780223}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 933153938}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1148780223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,6 +2054,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148780220}
   m_CullTransparentMesh: 1
+--- !u!114 &1148780225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148780220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af3b2d6e58ddfc40bf5df3758b0e82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReplayButtonHandler
 --- !u!1 &1209858148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,7 +2587,7 @@ Transform:
   m_GameObject: {fileID: 1846391229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.54, y: 3.73, z: 177.77992}
+  m_LocalPosition: {x: 10.16, y: -0.3, z: 177.77992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

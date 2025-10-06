@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
 {
     [Header("Enemy Stats")]
     public int health = 1;
-    public float moveSpeed = 1f;
+    public float moveSpeed = 5f;
 
     [Header("AI")]
     public float detectionRange = 5f;
@@ -26,21 +26,28 @@ public class Enemy : MonoBehaviour
         ChasePlayer();
     }
 
+    private void FixedUpdate()
+    {
+        
+    }
+
     private void ChasePlayer()
     {
         if (player)
         {
             if (GameManagerEx.Instance.score > 1000)
-                moveSpeed = 15f;
+                moveSpeed = 10f;
             if (GameManagerEx.Instance.score > 2000)
-                moveSpeed = 20f;
+                moveSpeed = 15f;
             float distance = Vector2.Distance(transform.position, player.position);
 
             if (distance <= detectionRange)
             {
                 Vector2 direction = (player.position - transform.position).normalized;
-               // rb.linearVelocity = direction * moveSpeed;
-               rb.AddForce(direction * moveSpeed);
+                // rb.linearVelocity = direction * moveSpeed;
+                rb.AddForce(direction * moveSpeed);
+                rb.AddForce(direction * moveSpeed);
+                rb.AddForce(direction * moveSpeed);
             }
             else
             {

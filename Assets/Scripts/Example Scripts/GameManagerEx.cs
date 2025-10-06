@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro; //Namesapce for textmeshpro
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class GameManagerEx : MonoBehaviour
 {
@@ -13,13 +14,15 @@ public class GameManagerEx : MonoBehaviour
     public int score = 0;//score is calculated
     public int lives = 3;
     public int enemiesKilled = 0;
-    public int gameState = 1; // 0 = menu, 1 = active, 2 = game over
+    public enum gameState {Menu, Playing, GameOver};
+    public gameState state;
 
     [Header("UI References")]
     public TMP_Text scoreText;
     public TMP_Text livesText;
     public TMP_Text enemiesKilledText;
     public GameObject gameOverPanel;
+    bool stateComplete;
 
     private void Awake()
     {
@@ -35,13 +38,57 @@ public class GameManagerEx : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (stateComplete)
+        {
+            SelectState();
+        }
+        UpdateState();
+    }
+
+    void SelectState()
+    {
+        stateComplete = false;
+        if (Time.timeScale == 0f)
+        {
+            state = gameState.GameOver;
+        }
+        else
+        {
+            state = gameState.Playing;
+            StartPlaying();
+        }
+
+    }
+
+    void UpdateState()
+    {
+        switch (state)
+        {
+            case gameState.Menu:
+                break;
+            case gameState.Playing:
+                break;
+            case gameState.GameOver:
+                break;
+        }
+    }
+
+    void StartPlaying()
+    {
+        Time.timeScale = 1f;
+    }
+
     private void OnEnable()
     {
+        state = gameState.Playing;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
+        state = gameState.Menu;
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -49,7 +96,6 @@ public class GameManagerEx : MonoBehaviour
     {
         RefreshUIReferences();
         UpdateUI();
-
     }
 
     private void Start()
@@ -61,18 +107,18 @@ public class GameManagerEx : MonoBehaviour
 
     private void RefreshUIReferences()
     {
-        
-       scoreText = GameObject.Find("Score")?.GetComponent<TMP_Text>();
-       livesText = GameObject.Find("Lives")?.GetComponent<TMP_Text>();
-       enemiesKilledText = GameObject.Find("EnemiesKilled")?.GetComponent<TMP_Text>();
-       gameOverPanel = GameObject.Find("GameEndPanel");
+
+        scoreText = GameObject.Find("Score")?.GetComponent<TMP_Text>();
+        livesText = GameObject.Find("Lives")?.GetComponent<TMP_Text>();
+        enemiesKilledText = GameObject.Find("EnemiesKilled")?.GetComponent<TMP_Text>();
+        gameOverPanel = GameObject.Find("GameEndPanel");
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(false);
         }
 
     }
-    
+
     public void AddScore(int points)
     {
         score += points;
@@ -118,7 +164,7 @@ public class GameManagerEx : MonoBehaviour
     {
         Debug.Log("GAME OVER!");
         if (gameOverPanel) gameOverPanel.SetActive(true);
-        gameState = 2;
+        state = gameState.GameOver;
         Time.timeScale = 0f; // Pause the game
     }
 
@@ -130,20 +176,22 @@ public class GameManagerEx : MonoBehaviour
 
     public void quitGame()
     {
-        gameState = 0;
+        Debug.Log("Quitting");
+        RestartGame();
+        state = gameState.Menu;
         SceneManager.LoadScene("MainMenu");
     }
 
-
     public void RestartGame()
     {
+        Debug.Log("Restarting");
         Time.timeScale = 1f;
 
         // Reset all game state
         score = 0;
         lives = 3;
         enemiesKilled = 0;
-        gameState = 1;
+        state = gameState.Playing;
 
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        
