@@ -16,11 +16,11 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
             nextSpawnTime = Time.time + spawnRate;
         }
-        if (GameManager.Instance.score > 400 && GameManager.Instance.score < 900)
+        if (GameManagerEx.Instance.score > 400 && GameManagerEx.Instance.score < 900)
             spawnRate = 1.5f;
-        if (GameManager.Instance.score > 900 && GameManager.Instance.score < 1400)
+        if (GameManagerEx.Instance.score > 900 && GameManagerEx.Instance.score < 1400)
             spawnRate = 1.0f;
-        if (GameManager.Instance.score > 1400 && GameManager.Instance.score < 2000)
+        if (GameManagerEx.Instance.score > 1400 && GameManagerEx.Instance.score < 2000)
             spawnRate = 0.5f;
     }
 
@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
         if (enemyPrefab && spawnPoints.Length > 0)
         {
             // Check if game is still running through Singleton
-            if (GameManager.Instance.lives > 0)
+            if (GameManagerEx.Instance.lives > 0)
             {
                 int randomIndex = Random.Range(0, spawnPoints.Length);
                 Instantiate(enemyPrefab, spawnPoints[randomIndex].position, Quaternion.identity);

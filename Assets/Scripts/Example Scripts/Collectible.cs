@@ -14,7 +14,7 @@ public class Collectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Easy access to GameManager through Singleton!
-            GameManager.Instance.CollectiblePickedUp(value);
+            GameManagerEx.Instance.CollectiblePickedUp(value);
             Destroy(gameObject);
         }
     }

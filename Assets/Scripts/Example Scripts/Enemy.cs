@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
 {
     [Header("Enemy Stats")]
     public int health = 1;
-    public float moveSpeed = 2f;
+    public float moveSpeed = 1f;
 
     [Header("AI")]
     public float detectionRange = 5f;
@@ -30,10 +30,10 @@ public class Enemy : MonoBehaviour
     {
         if (player)
         {
-            if (GameManager.Instance.score > 1000)
-                moveSpeed = 3f;
-            if (GameManager.Instance.score > 2000)
-                moveSpeed = 4f;
+            if (GameManagerEx.Instance.score > 1000)
+                moveSpeed = 15f;
+            if (GameManagerEx.Instance.score > 2000)
+                moveSpeed = 20f;
             float distance = Vector2.Distance(transform.position, player.position);
 
             if (distance <= detectionRange)
@@ -62,8 +62,8 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         // This is where Singleton shines!
-        // Any enemy can easily notify the GameManager
-        GameManager.Instance.EnemyKilled(); //update the score of the player
+        // Any enemy can easily notify the GameManagerEx
+        GameManagerEx.Instance.EnemyKilled(); //update the score of the player
         Destroy(gameObject); // the enemy gets destroyed
     }
 

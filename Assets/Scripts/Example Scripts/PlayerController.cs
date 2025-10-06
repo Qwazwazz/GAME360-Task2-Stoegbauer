@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
+    private Camera cam;
 
     [Header("Audio")]
 
@@ -18,13 +19,25 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        cam = Camera.main;
 
     }
 
     private void Update()
     {
+        HandleLook();
         HandleMovement();
         HandleShooting();
+    }
+
+    private void HandleLook()
+    {
+        Vector3 mousePos = (Vector2)cam.ScreenToWorldPoint(Input.mousePosition);
+        float angleRad = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x);
+        float angleDeg = (180 / Mathf.PI) * angleRad - 90;
+
+        transform.rotation = Quaternion.Euler(0f, 0f, angleDeg);
+        Debug.DrawLine(transform.position, mousePos, Color.white, Time.deltaTime);
     }
 
     private void HandleMovement()
@@ -48,9 +61,9 @@ public class PlayerController : MonoBehaviour
 
     private void FireBullet()
     {
-        if (GameManager.Instance.score > 499 && GameManager.Instance.score < 1000)
+        if (GameManagerEx.Instance.score > 499 && GameManagerEx.Instance.score < 1000)
             fireRate = 0.3f;
-        if (GameManager.Instance.score > 1000)
+        if (GameManagerEx.Instance.score > 1000)
             fireRate = 0.1f;
 
         if (bulletPrefab && firePoint)
@@ -58,7 +71,7 @@ public class PlayerController : MonoBehaviour
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         }
 
-        AudioManager.PlaySound(SoundType.SHOOT);
+        AudioManagerEx.PlaySound(SoundType.SHOOT);
         // Play shoot sound effect
         
     }
@@ -68,7 +81,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             // Player hit by enemy - lose a life
-            GameManager.Instance.LoseLife();
+            GameManagerEx.Instance.LoseLife();
         }
 
         if (other.CompareTag("Collectible"))
@@ -77,8 +90,8 @@ public class PlayerController : MonoBehaviour
             Collectible collectible = other.GetComponent<Collectible>();
             if (collectible)
             {
-                GameManager.Instance.CollectiblePickedUp(100);
-                AudioManager.PlaySound(SoundType.COIN);
+                GameManagerEx.Instance.CollectiblePickedUp(100);
+                AudioManagerEx.PlaySound(SoundType.COIN);
                 Destroy(other.gameObject);
 
 

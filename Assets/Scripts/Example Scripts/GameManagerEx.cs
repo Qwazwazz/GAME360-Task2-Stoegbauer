@@ -4,10 +4,10 @@ using UnityEngine.UI;
 using TMPro; //Namesapce for textmeshpro
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManagerEx : MonoBehaviour
 {
     // Singleton instance
-    public static GameManager Instance { get; private set; }
+    public static GameManagerEx Instance { get; private set; }
 
     [Header("Game Stats")]
     public int score = 0;//score is calculated
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); // Destroy duplicate GameManagers
+            Destroy(gameObject); // Destroy duplicate GameManagerExs
         }
     }
 
@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    
     public void AddScore(int points)
     {
         score += points;
